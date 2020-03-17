@@ -4,8 +4,7 @@ const mg = require('mongoose');
 const dotenv = require("dotenv");
 const go = require('./routes/go');
 const post = require('./models/post')
-
-dotenv.config();
+require('dotenv').config();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -13,7 +12,7 @@ app.use('/go', go);
 app.get('/home', (req, res) => {
     res.redirect('/')
 })
-mg.connect('mongodb+srv://yuwi:veryhighsecurerootpassword@yuwi-uased.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
+mg.connect(process.env.host, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
     console.log('connected yay!');
 })
