@@ -25,7 +25,9 @@ async function cdb(id) {
     }
 
 };
-
+router.get('/', (req, res) => {
+    res.redirect(301, '/')
+})
 router.post('/', async (req, res) => {
     if (req.body.link.indexOf('https:') != -1 || req.body.link.indexOf('http:') != -1) {
         do {
