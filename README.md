@@ -1,5 +1,6 @@
 # Shorturl
 This is a Node App that will shorter your link
+Live demo : https://inx.glitch.me/
 
 ### Installation
 git clone this project
@@ -37,7 +38,7 @@ npm start
 ```
 
 
-# Usage
+# API Usage
 to use the app you simply using POST data method
 
 Example
